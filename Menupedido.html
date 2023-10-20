@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <title>Pedido de Lanches</title>
+
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Hamburgueria</title>
+<body>
+
+  <h1>Escolha o seu pedido</h1>
+
+    <script>
+
+    const hamburgueres = {
+      X1: 1.36,
+      X2: 2.31,
+      X3: 2.81,
+      X4: 3.21
+    };
+
+    const acompanhamentos = {
+      Nuggets: 3.69,
+      Fritas: 1.58
+    };
+
+    const bebidas = {
+      Fanta: 2.58,
+      Água: 0.98
+    };
+
+    const itensEscolhidos = [];
+
+    const pedHamburguer = prompt("Escolha o seu hamburguer (X1, X2, X3, X4): ");
+    itensEscolhidos.push(pedHamburguer);
+
+    const pedAcompanhamento = prompt("Escolha o seu acompanhamento (Nuggets, Fritas): ");
+    itensEscolhidos.push(pedAcompanhamento);
+
+    const pedBebida = prompt("Escolha a sua bebida (Fanta, Água): ");
+    itensEscolhidos.push(pedBebida);
+
+    let totalPedido = 0;
+    totalPedido += hamburgueres[pedHamburguer];
+    totalPedido += acompanhamentos[pedAcompanhamento];
+    totalPedido += bebidas[pedBebida];
+
+    const resultado = `Produtos Escolhidos: ${itensEscolhidos} <br>Total pedido: R$${totalPedido}`;
+    document.body.innerHTML += "<p>" + resultado + "</p>";
+
+  </script>
+
+</body>
+
+</html>
